@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Details</title>
+  </head>
+  <body>
+    <h1>More about <%= dog.name %></h1>
+    <p>Name: <%= dog.name %></p>
+    <p>Breed: <%= dog.breed %></p>
+    <p>Is Good Boy: <%= dog.isGoodBoy ? "Yes" : "No" %></p>
+    <a href="/dogs/<%= dog._id %>/edit">Edit</a>
+    <form action="/dogs/<%= dog._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+    <br />
+    <a href="/dogs">Back to full list</a>
+  </body>
+</html>
